@@ -1,0 +1,1006 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMWARE AND GIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            border: 3px solid #00aaff; /* Blue border to match the theme */
+        }
+
+        header {
+            text-align: center;
+            background-color: #00aaff; /* Theme blue color */
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        .link {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            border: 2px solid #00aaff;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f0f8ff; /* Light background matching the theme */
+        }
+
+        .cta-button {
+            background-color: #00aaff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 1.1em;
+        }
+
+        .cta-button:hover {
+            background-color: #007bb5;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #007bb5; /* Darker blue for the footer */
+            color: white;
+            padding: 15px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* New CSS for the main image section */
+        #main-image {
+            position: relative;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #main-image img {
+            width: 100%;
+            height: auto;
+            max-width: 100vw; /* Full width for the image */
+            height: 80vh; /* Reduce the vertical height to 70 from 100 the viewport height */
+            border-radius: 15px; /* Rounded corners */
+        }
+
+        /* Title on the image */
+        #main-image-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+        }
+
+        /* Responsive design adjustments */
+        @media screen and (max-width: 768px) {
+            #main-image-title {
+                font-size: 2em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #main-image-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+
+    <!-- Main image section with title on top -->
+    <section id="main-image">
+        <img src= "C:\Users\truen\OneDrive\Desktop\602Assingment3\banner.png" alt="AI-Driven Image">
+        <div id="main-image-title"> 602, 603 Assignment</div>
+    </section>
+</body>
+</html>
+
+  
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMWARE AND GIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            border: 3px solid #00aaff; /* Blue border to match the theme */
+        }
+
+        header {
+            text-align: center;
+            background-color: #00aaff; /* Theme blue color */
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin: 0;
+        }
+
+        h2.subtitle {
+            font-size: 1.8em;
+            color: #ffc107; /* Yellow color to match the subtitle */
+            margin-top: 10px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        .link {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            border: 2px solid #00aaff;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f0f8ff; /* Light background matching the theme */
+        }
+
+        .cta-button {
+            background-color: #00aaff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 1.1em;
+        }
+
+        .cta-button:hover {
+            background-color: #007bb5;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #007bb5; /* Darker blue for the footer */
+            color: white;
+            padding: 15px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .fun-fact {
+            background-color: #f0f8ff;
+            border-left: 5px solid #00aaff;
+            padding: 10px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        /* Custom Menu Styling */
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .menu-button {
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #00aaff;
+            border-radius: 10px;
+            background-color: #ffffff; /* White button background */
+            color: #00aaff; /* Blue text to match the theme */
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            text-align: center;
+            width: 120px;
+            height: 120px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-button:hover {
+            background-color: #00aaff;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-button span {
+            font-size: 30px;
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+
+
+    
+    <div class="container">
+        <!-- Updated Menu -->
+        <div class="menu-container">
+            <a href="page2.html" class="menu-button"><span>🛠️</span>VMware Setup</a>
+            <a href="page3.html" class="menu-button"><span>💻</span>Hyper-V Config</a>
+            <a href="page4.html" class="menu-button"><span>⚙️</span>Create VMs</a>
+            <a href="page5.html" class="menu-button"><span>📂</span>AD Services</a>
+            <a href="page6.html" class="menu-button"><span>🔐</span>Group Policy</a>
+            <a href="page7.html" class="menu-button"><span>🖨️</span>Printing</a>
+            <a href="page8.html" class="menu-button"><span>📦</span>WDS</a>
+            <a href="page9.html" class="menu-button"><span>🔄</span>VM Management</a>
+            <a href="page10.html" class="menu-button"><span>🛡️</span>Security</a>
+            <a href="page11.html" class="menu-button"><span>🔧</span>Config</a>
+            <a href="page12.html" class="menu-button"><span>🚀</span>Deployment</a>
+        </div>
+
+    
+    </div>
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👩‍💻 GitHub Overview</title>
+    <style>
+        .border-box {
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>👩‍💻 GitHub Overview</h1>
+    <p>GitHub was founded by some pretty cool folks: Tom Preston-Werner, Chris Wanstrath, P. J. Hyett, and Scott Chacon in 2008. 💥 It's now the ultimate hangout spot for developers looking to collaborate, share code, and geek out over version control! Oh, and guess what? Microsoft acquired GitHub in 2018. 🎉 Today, GitHub is THE platform for developers worldwide. 🌍</p>
+
+    <h2>Why People Use GitHub</h2>
+    <p>GitHub is a vital tool for developers because it provides an intuitive platform for version control and collaboration. It helps manage code changes and allows multiple developers to work on a project simultaneously without conflicts.</p>
+
+    <h2>Real-Life Scenario: Airbnb</h2>
+    <p>Airbnb, the global home rental platform, uses GitHub to manage its vast codebase. With numerous developers working on different aspects of the platform, GitHub allows them to collaborate seamlessly, track changes, and ensure that new features and fixes are deployed efficiently.</p>
+    <p>By leveraging GitHub, Airbnb has been able to maintain high code quality and streamline its development process, which is crucial for providing a reliable service to millions of users worldwide.</p>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>More Information</title>
+    </head>
+    <body>
+        <h2>For More Information</h2>
+        <p>For more information about how to start your project, using a Kanban board, assigning your colleagues to a project, and more, please click on the official GitHub link to learn more: <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects" target="_blank">GitHub Official Documentation</a>.</p>
+    </body>
+    </html>
+    
+
+
+
+    <div class="border-box">
+        <h2>Pros and Cons of GitHub</h2>
+        <h3>Pros</h3>
+        <ul>
+            <li><strong>Collaboration</strong>: GitHub enables multiple developers to work together on projects, enhancing productivity and innovation.</li>
+            <li><strong>Version Control</strong>: It offers robust version control, making it easy to track changes and revert to previous versions if needed.</            <li><strong>Community</strong>: GitHub has a vast community of developers, providing opportunities for learning, sharing, and networking.</li>
+            <li><strong>Integration</strong>: It integrates with numerous tools and services, making it a versatile platform for development workflows.</li>
+            <li><strong>Security</strong>: GitHub provides features to secure code repositories, including two-factor authentication and encrypted backups.</li>
+        </ul>
+        <h3>Cons</h3>
+        <ul>
+            <li><strong>Cost</strong>: While GitHub offers free plans, some advanced features and private repositories require a paid subscription.</li>
+            <li><strong>Complexity</strong>: Beginners might find GitHub’s interface and features overwhelming initially.</li>
+            <li><strong>Privacy Concerns</strong>: Hosting code on a third-party platform might raise privacy and security concerns for some users.</li>
+            <li><strong>Dependency</strong>: Heavy reliance on GitHub’s services can be risky if there are outages or changes in policy.</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+   
+
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why VMware?</title>
+    <style>
+        .border-box {
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 Why VMware? 🌟</h1>
+    <p>VMware is a game-changer in the world of IT infrastructure and virtualization. Here's why it's a must-have for businesses and tech enthusiasts alike.</p>
+    
+    <h2>Why People Need VMware</h2>
+    <p>In a rapidly evolving tech landscape, efficient resource utilization and flexibility are crucial. VMware enables organizations to maximize their existing hardware, reducing costs and enhancing performance. By creating multiple virtual machines on a single physical server, VMware ensures that resources are used to their fullest potential, minimizing waste and maximizing ROI.</p>
+
+    <p>VMware is trusted by businesses worldwide for its reliability and advanced capabilities. Whether it's to streamline operations, enhance scalability, or bolster security, VMware provides the tools needed to manage complex IT environments with ease.</p>
+
+    <h2>What VMware is Used For</h2>
+    <p>VMware is versatile and can be used for a variety of applications:</p>
+    <ul>
+        <li><strong>Server Consolidation</strong>: Reduce the number of physical servers by running multiple virtual servers on a single machine.</li>
+        <li><strong>Testing and Development</strong>: Create isolated environments for testing new software or updates without affecting the live environment.</li>
+        <li><strong>Disaster Recovery</strong>: Ensure business continuity by quickly recovering systems using virtual machine backups.</li>
+        <li><strong>Cloud Computing</strong>: Leverage VMware's cloud solutions to build and manage private, public, or hybrid clouds.</li>
+        <li><strong>Virtual Desktops</strong>: Deploy virtual desktops to provide employees with flexible, remote access to their workstations.</li>
+    </ul>
+
+    <h2>Real-Life Scenario: The Boeing Company</h2>
+    <p>Boeing, a leading aerospace and defense company, faced the challenge of managing a large and complex IT infrastructure across multiple locations and departments. They needed a solution that could provide flexibility, scalability, and robust security.</p>
+    <p>Boeing implemented VMware's virtualization solutions to consolidate their servers and create a more efficient and manageable IT environment. By using VMware, Boeing was able to reduce the number of physical servers, lower energy consumption, and improve overall system performance.</p>
+    <p>The implementation of VMware allowed Boeing to achieve significant cost savings, enhance operational efficiency, and ensure better security for their critical systems. This transformation enabled Boeing to focus on innovation and growth, rather than being bogged down by IT management challenges.</p>
+
+    <div class="border-box">
+        <h2>Pros and Cons of VMware</h2>
+        <h3>Pros</h3>
+        <ul>
+            <li><strong>Virtualization Efficiency</strong>: VMware offers robust performance and efficiency, allowing multiple virtual machines to run on a single physical machine.</li>
+            <li><strong>Compatibility</strong>: VMware supports a wide range of operating systems, making it versatile for different environments.</li>
+            <li><strong>Advanced Features</strong>: VMware provides features like vMotion, which allows live migration of VMs, and High Availability, ensuring uptime.</li>
+            <li><strong>Scalability</strong>: VMware scales well from small deployments to large data centers.</li>
+            <li><strong>Security</strong>: Offers comprehensive security features to protect virtual environments.</li>
+            <li><strong>Support and Documentation</strong>: VMware has extensive support and documentation, making it easier to troubleshoot and optimize.</li>
+        </ul>
+        <h3>Cons</h3>
+        <ul>
+            <li><strong>Cost</strong>: VMware can be expensive, especially for enterprise features and licenses.</li>
+            <li><strong>Resource Intensive</strong>: It requires significant hardware resources to run efficiently, which might be a limitation for smaller setups.</li>
+            <li><strong>Complexity</strong>: Setting up and managing VMware environments can be complex and may require specialized knowledge.</li>
+            <li><strong>Compatibility Issues</strong>: While generally versatile, there can be compatibility issues with certain hardware or software configurations.</li>
+            <li><strong>Learning Curve</strong>: There's a steep learning curve for those new to virtualization, which can be a barrier to entry.</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Success Story: IT Support Administration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Client Success Story: IT Support Administration</h1>
+    </header>
+
+    <section>
+        <h2>The Challenge</h2>
+        <p>SkySync, a specialist in VMware solutions, recently worked with an IT Support Administration business that had just expanded its technical team. The business required a solution to enhance its support team's efficiency using virtualized environments.</p>
+        <p>The client reached out to SkySync with a request: <strong>"Can you set up VMware on two employees' systems and provide a user-friendly manual?"</strong></p>
+    </section>
+
+    <section>
+        <h2>The Project</h2>
+        <p>SkySync identified the potential benefits of implementing virtual machines for the client’s IT team. Virtual environments would enable testing, troubleshooting, and more efficient client handling. The team devised a plan to install VMware Workstation, configure virtual machines, and implement key features like checkpoints to restore VMs to previous states, ensuring flexibility in testing configurations.</p>
+    </section>
+
+    <section>
+        <h2>The Request for a Manual</h2>
+        <p>Following the installation, the client requested a <strong>comprehensive manual</strong> to guide employees through managing their VMs independently. SkySync developed a step-by-step manual hosted on GitHub for easy access and version control. The manual included:</p>
+        <ul>
+            <li><strong>Section 1</strong>: How to launch VMware Workstation.</li>
+            <li><strong>Section 2</strong>: Creating and managing virtual machines for different operating systems.</li>
+            <li><strong>Section 3</strong>: How to create VM Checkpoints.</li>
+            <li><strong>Section 4</strong>: Performing Live Migrations of VMs between systems.</li>
+            <li><strong>Section 5</strong>: Using VMware's Sysprep utility to create VM templates.</li>
+        </ul>
+        <p>The manual also outlined <strong>best practices</strong> for resource management, backup strategies, and security configurations using Group Policy and Windows Defender firewall rules.</p>
+    </section>
+
+    <section>
+        <h2>Delivering the Solution</h2>
+        <p>Upon completing the project, SkySync provided a detailed walk-through for the client’s team. The manual, hosted on GitHub, ensured easy access and seamless updates for the client’s employees. The VMware setup was successfully implemented, and the team was equipped to handle virtual environments with minimal support.</p>
+    </section>
+
+    <section>
+        <h2>The Outcome</h2>
+        <p>SkySync’s ability to not only implement VMware but also provide a comprehensive, version-controlled manual on GitHub allowed the client’s IT support team to work efficiently. This solution, tailored to the client’s needs, provided a scalable, long-term framework for future growth. SkySync continues to support businesses by delivering robust virtualized environments and empowering clients with the knowledge to maintain them.</p>
+    </section>
+
+</body>
+
+</html>
+
+
+
+
+
+</html>
+
+        </div>
+
+        <!-- Call-to-Action Button -->
+        <div class="section">
+            <h2>✨ Ready to Get Started?</h2>
+            <a href="page2.html" class="cta-button">Create a GitHub Account</a>
+        </div>
+    </div>
+
+   
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Guide - VMware & Windows Server</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1, h2, h3 {
+            color: #005f73;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ol li {
+            margin-bottom: 15px;
+        }
+
+        .on-screen {
+            border: 2px solid #005f73;
+            padding: 10px;
+            background-color: #e0f7fa;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .fun-extras {
+            background-color: #e6f9ff;
+            border: 2px solid #008cba;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Big Button Styles */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .big-button {
+            background-color: #008cba;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 10px 5px;
+        }
+
+        .big-button:hover {
+            background-color: #005f73;
+        }
+
+        .home-button {
+            background-color: #f57c00;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 10px 5px;
+        }
+
+        .home-button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Responsive Design using Media Queries */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1000px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .big-button, .home-button {
+                padding: 12px 30px;
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                max-width: 850px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .big-button, .home-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 700px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            .big-button, .home-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                max-width: 100%;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.4em;
+            }
+            .big-button, .home-button {
+                padding: 8px 18px;
+                font-size: 0.85em;
+            }
+            ol li {
+                font-size: 0.9em;
+            }
+        }
+
+        /* Additional Styling for Small Devices */
+        @media (max-width: 400px) {
+            .container {
+                padding: 5px;
+            }
+            h1 {
+                font-size: 1.0em;
+            }
+            p {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <main>
+            <!-- Step-by-Step Guide -->
+            <section class="section bordered guide-section">
+                <h2>Installation Guide 🛠️</h2>
+                <ol>
+                    <li>
+                        <h3>Step 1: Visit VMware’s Website 🌐</h3>
+                        <p>Go to the official <a href="https://www.vmware.com" target="_blank" class="link">VMware website</a>.</p>
+                        <div class="on-screen">👀 Look for the Downloads section at the top. Grab your VMware software!</div>
+                    </li>
+                    <!-- Add other steps here -->
+                </ol>
+            </section>
+
+            <!-- Fun Extras -->
+            <section class="fun-extras section">
+                <h2>🎉 Bonus Tips & Tricks 🎉</h2>
+                <p>Try exploring the various roles and services offered in Server Manager</p>
+            </section>
+
+
+
+
+
+
+
+
+            
+            <!-- Navigation Buttons -->
+            <div class="button-container">
+                <a href="index.html" class="home-button">🏠 Go To The Top Of The Page</a>
+                <a href="page2.html" class="big-button">Next: Network Services & Admin Tools</a>
+            </div>
+        </main>
+    </div>
+
+
+   
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Server Management Guide</title>
+        <style>
+            /* Main video section styling */
+            .video-section {
+                background-color: #f0f0f0;
+                padding: 50px;
+                text-align: center;
+            }
+    
+            .video-section h2 {
+                color: #007bb5;
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                font-family: Arial, sans-serif;
+            }
+    
+            /* Grid layout for videos */
+            .video-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto-adjust for screens */
+                gap: 20px;
+                justify-items: center;
+                align-items: start;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+    
+            .video-card {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                transition: transform 0.3s ease;
+            }
+    
+            .video-card:hover {
+                transform: scale(1.05); /* Slight hover effect */
+            }
+    
+            .video-card iframe {
+                width: 100%;
+                height: 200px;
+                border: none;
+            }
+    
+            .video-description {
+                padding: 15px;
+                font-size: 1.1em;
+                color: #333;
+                background-color: #ffffff;
+            }
+    
+        </style>
+    </head>
+    <body>
+    
+        <!-- Video Section -->
+        <div class="video-section">
+            <h2>Internet Resources</h2>
+            <div class="video-grid">
+                
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/mpQZVYPuDGU" allowfullscreen></iframe>
+                    <div class="video-description">Server Manager - Video 1</div>
+                </div>
+    
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/rq-Dqjb_LGU" allowfullscreen></iframe>
+                    <div class="video-description">Server Manager - Video 2</div>
+                </div>
+    
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/Wa7yqCNAlBo" allowfullscreen></iframe>
+                    <div class="video-description">Create Domain Controller</div>
+                </div>
+    
+                <!-- Video 4 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/fUK6d3s1Im4" allowfullscreen></iframe>
+                    <div class="video-description">DHCP Configuration</div>
+                </div>
+    
+                <!-- Video 5 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/86TU6wZfPfk" allowfullscreen></iframe>
+                    <div class="video-description">Join a Client to a Domain</div>
+                </div>
+    
+                <!-- Video 6 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/-TsqAHUWdQU" allowfullscreen></iframe>
+                    <div class="video-description">DNS Configuration</div>
+                </div>
+    
+                <!-- Video 7 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/_6q3wiYzbXg" allowfullscreen></iframe>
+                    <div class="video-description">nslookup CMD Tool</div>
+                </div>
+    
+                <!-- Video 8 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/CBsU92nraDk" allowfullscreen></iframe>
+                    <div class="video-description">WINS Configuration</div>
+                </div>
+    
+                <!-- Video 9 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/1vWSKLX0Xrk" allowfullscreen></iframe>
+                    <div class="video-description">Create Parent-child Domains & AD Replication</div>
+                </div>
+    
+                <!-- Video 10 -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/cETbT22TWEE" allowfullscreen></iframe>
+                    <div class="video-description">Create AD Objects: OU, Groups, Users</div>
+                </div>
+    
+            </div>
+        </div>
+    
+       
+    
+    </body>
+    </html>
+      
+        
+    
+
+
+    
+
+    <style>
+        footer {
+            position: relative;
+            background-color: #007bb5; /* Darker blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+            overflow: hidden;
+            height: 100px; /* Adjust height to ensure all items are visible */
+        }
+    
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    
+        /* General styling for all animated items */
+        .animated-item {
+            position: absolute;
+            font-size: 2.5em;
+            animation: moveItems 14s infinite alternate ease-in-out; /* Slower movement */
+        }
+    
+        /* Animation for items moving left to right */
+        @keyframes moveItems {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: calc(100% - 2.5em); /* Full width movement */
+            }
+        }
+    
+        /* Position each item with a slight delay for variety */
+        .computer1 {
+            top: 10px;
+            animation-delay: 0s;
+        }
+    
+        .computer2 {
+            top: 40px;
+            animation-delay: 2s;
+        }
+    
+        .male {
+            top: 70px;
+            animation-delay: 4s;
+        }
+    
+        .female {
+            top: 50px;
+            animation-delay: 6s;
+        }
+    
+        /* Adding robots */
+        .robot1 {
+            top: 20px;
+            animation-delay: 8s;
+        }
+    
+        .robot2 {
+            top: 30px;
+            animation-delay: 10s;
+        }
+    
+        .robot3 {
+            top: 60px;
+            animation-delay: 12s;
+        }
+    </style>
+    
+    <footer>
+        <p>© 2024 Responsive VMware & Server Installation Guide</p>
+        <p>© 2024 Nazima Khatun - INFO603 & INFO602 Practical Project</p>
+        &copy; 2024 Your Friendly Tech Guide. All Rights Reserved
+           
+     
+       
+    
+        <!-- Moving computers, male, female, and robots -->
+        <div class="animated-item computer1">💻</div> <!-- First computer -->
+        <div class="animated-item computer2">💻</div> <!-- Second computer -->
+        <div class="animated-item male">👨</div> <!-- Male human -->
+        <div class="animated-item female">👩</div> <!-- Female human -->
+        <div class="animated-item robot1">🤖</div> <!-- First robot -->
+        <div class="animated-item robot2">🤖</div> <!-- Second robot -->
+        <div class="animated-item robot3">🤖</div> <!-- Third robot -->
+    </footer>
+     
+     

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySync - Group Policy and Security</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #57c2ff;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 80px;
+            height: auto;
+        }
+
+        .content {
+            background-color: #eaf6ff;
+            padding: 30px;
+            min-height: 400px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #2a7fff;
+            margin-bottom: 20px;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            font-size: 1.2em;
+            box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            width: 180px;
+        }
+
+        .menu-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .menu-button span {
+            margin-right: 8px;
+            font-size: 1.5em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="C:\Users\truen\OneDrive\Desktop\602Assingment3\logo.png" alt="SkySync Logo" class="logo"> <!-- Replace with the path to your logo -->
+        <h1>SkySync</h1>
+    </div>
+
+    <div class="content">
+        <h2>🔐 Group Policy and Security</h2>
+
+        <div class="menu-container">
+            <a href="page2.html" class="menu-button"><span>🛠️</span>VMware Setup</a>
+            <a href="page3.html" class="menu-button"><span>💻</span>Hyper-V Config</a>
+            <a href="page4.html" class="menu-button"><span>⚙️</span>Create VMs</a>
+            <a href="page5.html" class="menu-button"><span>📂</span>AD Services</a>
+            <a href="page6.html" class="menu-button"><span>🔐</span>Group Policy</a>
+            <a href="page7.html" class="menu-button"><span>🖨️</span>Printing</a>
+            <a href="page8.html" class="menu-button"><span>📦</span>WDS</a>
+            <a href="page9.html" class="menu-button"><span>🔄</span>VM Management</a>
+            <a href="page10.html" class="menu-button"><span>🛡️</span>Security</a>
+            <a href="page11.html" class="menu-button"><span>🔧</span>Config</a>
+            <a href="page12.html" class="menu-button"><span>🚀</span>Deployment</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SkySync. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 6: Group Policy and Security</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f7;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        h2 {
+            color: #2196F3;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .section-link {
+            display: inline-block;
+            border: 2px solid #2196F3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .section-link:hover {
+            background-color: #2196F3;
+            color: white;
+        }
+        .step {
+            margin-top: 20px;
+            font-size: 1.1em;
+            border: 2px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .step:nth-child(even) {
+            background-color: #e6f7ff;
+        }
+        .emoji {
+            font-size: 1.3em;
+        }
+        .dropdown {
+            margin-left: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            background-color: #f0f0f0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Section 6: Group Policy and Security</h1>
+
+    <h2>Goals</h2>
+    <ul>
+        <li>Configure and test Group Policy Objects (GPOs) for Software settings, Windows settings, and Administrative templates</li>
+        <li>Link GPOs to AD objects</li>
+        <li>Enforce GPO inheritance</li>
+        <li>Configure Windows Server Update Services (WSUS) on WS1</li>
+        <li>Configure and test Windows Defender firewall rules</li>
+    </ul>
+
+    <h2>Implementation Steps</h2>
+
+    <!-- Step 1 -->
+    <div class="step">
+        <span class="emoji">📋</span> <b>Step 1:</b> Open the <b>Group Policy Management</b> console on WS2. <i>Right-click</i> the “Group Policy Objects” folder and select <b>New</b> from the drop-down. 🎯<br>
+        <i>Where do you find and edit GPOs?</i> <br>
+        You’ll find default GPOs like **Default Domain Policy** and **Default Domain Controllers Policy** before any custom configurations.
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step">
+        <span class="emoji">🔗</span> <b>Step 2:</b> Enforce the <b>Default Domain Policy</b> inheritance by <i>Right-clicking</i> on it, choosing <b>Enforced</b> from the drop-down.<br>
+        <i>What does this do?</i> <br>
+        This ensures that the policy settings are applied and cannot be overridden by other GPOs lower in the Active Directory hierarchy.
+    </div>
+
+    <!-- Step 3 with dropdown example -->
+    <div class="step">
+        <span class="emoji">👥</span> <b>Step 3:</b> Configure and link GPOs to AD objects (OU/groups) on WS2. Follow these steps:
+        <div class="dropdown">
+            <b>Administrative Templates:</b> 
+            <div class="dropdown-content">
+                <ul>
+                    <li>Create a shared folder named <b>wallpaper</b> on WS2 and save two .jpg files inside it. Ensure all groups have read access.</li>
+                    <li>Create group-specific desktop wallpapers for each group via GPO. <i>Right-click</i> your GPO, choose <b>Edit</b>, then navigate to <b>User Configuration > Administrative Templates > Desktop</b>. Set the wallpaper path.</li>
+                    <li>Disable Control Panel and Command Prompt access for the <b>Accounts</b> group only using the Administrative Templates section.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <b>Windows Settings:</b> 
+            <div class="dropdown-content">
+                <ul>
+                    <li>Set <b>Password Policies</b> (e.g., maximum password age, length) under <b>Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies</b>.</li>
+                    <li>Set <b>Account Lockout Thresholds</b> and reset lockout counters for all users.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <b>Software Settings:</b> 
+            <div class="dropdown-content">
+                <ul>
+                    <li>For the <b>Developers</b> group, assign a specific application by converting the .exe to an .msi and publishing it. <i>Right-click</i> the <b>Software Installation</b> node, select <b>New > Package</b>, and choose <b>Assigned</b> for the app deployment method.</li>
+                    <li>What’s the difference between <b>Assigned</b> and <b>Published</b>? 🤔</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step">
+        <span class="emoji">💻</span> <b>Step 4:</b> Apply GPOs using the Command Prompt. Open <b>Command Prompt</b> as an administrator, then type:
+        <br><code>gpupdate /force</code> 
+        <br>This forces an immediate policy update.
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step">
+        <span class="emoji">🔐</span> <b>Step 5:</b> Log in as different users to test that the GPOs are applied correctly. Verify that wallpapers, software assignments, and restrictions are functioning as expected.
+    </div>
+
+    <!-- Step 6 -->
+    <div class="step">
+        <span class="emoji">🛠️</span> <b>Step 6:</b> Set up <b>Windows Server Update Services (WSUS)</b> on WS1:
+        <ul>
+            <li><i>Right-click</i> on the WSUS role in Server Manager to add it to WS1.</li>
+            <li>Ensure WS1 has a second network adapter connected to the Internet.</li>
+            <li>Configure WSUS to download updates from Microsoft and save them to the <b>E: drive</b> (second virtual hard drive).</li>
+        </ul>
+    </div>
+
+    <!-- Step 7 -->
+    <div class="step">
+        <span class="emoji">🚦</span> <b>Step 7:</b> Create new <b>Windows Defender Firewall</b> inbound rules to allow only traffic required by the previous sections (e.g., RD Gateway, SMB, DFS). <i>Right-click</i> on <b>Inbound Rules</b>, select <b>New Rule</b>, and specify the required ports.
+    </div>
+
+    <!-- Step 8 -->
+    <div class="step">
+        <span class="emoji">🧪</span> <b>Step 8:</b> Test inbound and outbound traffic to ensure expected traffic (e.g., RDP, file shares) is allowed while other traffic is blocked.
+    </div>
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>What ports did you allow and why?</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+    
+            header {
+                background-color: #2c3e50;
+                padding: 20px;
+                text-align: center;
+                color: white;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+    
+            h1 {
+                margin: 0;
+                font-size: 2.5em;
+            }
+    
+            main {
+                padding: 40px;
+                max-width: 900px;
+                margin: 40px auto;
+                background-color: white;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+    
+            section {
+                margin-bottom: 30px;
+            }
+    
+            h2 {
+                font-size: 1.8em;
+                color: #2980b9;
+                border-left: 4px solid #2980b9;
+                padding-left: 10px;
+            }
+    
+            p {
+                font-size: 1.1em;
+                line-height: 1.8;
+                margin: 10px 0;
+                color: #555;
+            }
+    
+            p strong {
+                color: #000;
+            }
+    
+            footer {
+                text-align: center;
+                margin-top: 40px;
+                font-size: 0.9em;
+                color: #888;
+            }
+    
+            @media (max-width: 768px) {
+                main {
+                    padding: 20px;
+                    margin: 20px;
+                }
+    
+                h1 {
+                    font-size: 2em;
+                }
+    
+                h2 {
+                    font-size: 1.5em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    
+        <header>
+            <h1>What ports did you allow and why?</h1>
+        </header>
+    
+        <main>
+            <section>
+                <h2>1. Port 80 (HTTP)</h2>
+                <p><strong>Why:</strong> Port 80 is used for web traffic (HTTP), allowing users to access websites over the internet. If your server or system is hosting a website or any web-based service, allowing port 80 is essential for standard web traffic.</p>
+            </section>
+    
+            <section>
+                <h2>2. Port 443 (HTTPS)</h2>
+                <p><strong>Why:</strong> Port 443 is used for secure web traffic (HTTPS). It is crucial for encrypting communication between the server and the client, ensuring data protection. This port should be allowed if you are hosting a secure website.</p>
+            </section>
+    
+            <section>
+                <h2>3. Port 3389 (RDP - Remote Desktop Protocol)</h2>
+                <p><strong>Why:</strong> This port is used by Remote Desktop Protocol (RDP) for remote management of Windows servers or systems. If you need remote access, allowing this port is necessary. However, it’s a security risk if not properly managed, so only allow this port if necessary, and consider restricting access by IP or using a VPN.</p>
+            </section>
+    
+            <section>
+                <h2>4. Port 53 (DNS)</h2>
+                <p><strong>Why:</strong> DNS queries use port 53, and allowing this port enables domain name resolution, which translates domain names to IP addresses. This is fundamental for both internal and external networking.</p>
+            </section>
+    
+            <section>
+                <h2>5. Port 445 (SMB - Server Message Block)</h2>
+                <p><strong>Why:</strong> This port is used for file sharing in Windows environments, especially when dealing with network shares or domain controllers. If your project involves Active Directory, file sharing, or any SMB-based services, allowing this port is needed.</p>
+            </section>
+    
+            <section>
+                <h2>6. Port 25 (SMTP)</h2>
+                <p><strong>Why:</strong> Simple Mail Transfer Protocol (SMTP) uses port 25 to send emails. If your system or application needs to send out emails, allowing port 25 or a similar mail protocol port (like 587) is necessary.</p>
+            </section>
+    
+            <section>
+                <h2>7. Port 8530 (WSUS)</h2>
+                <p><strong>Why:</strong> If you're configuring <strong>Windows Server Update Services (WSUS)</strong>, you need to allow this port (or port 8531 for secure HTTPS) so that the client machines can communicate with the WSUS server and receive updates.</p>
+            </section>
+    
+            <section>
+                <h2>8. Ports for Active Directory and GPO Management</h2>
+                <p><strong>Port 389 (LDAP):</strong> Allows communication for directory services.</p>
+                <p><strong>Port 135 (RPC):</strong> Needed for various AD and GPO functionalities.</p>
+                <p><strong>Port 445 (SMB):</strong> Required for GPO replication.</p>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024, Your Name. All rights reserved.</p>
+        </footer>
+    
+    </body>
+    </html>
+    
+
+
+
+
+
+
+    <h2>Previous Section</h2>
+    <a class="section-link" href="page8.html">Section 5: Remote Access and Monitoring</a>
+
+</body>
+</html>
+
+
+
+
+<h2>Next Section</h2>
+<a class="section-link" href="page10.html">Section 7: Printing</a>
+
+

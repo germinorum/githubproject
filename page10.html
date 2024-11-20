@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySync - Section 7: Printing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #57c2ff;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 80px;
+            height: auto;
+        }
+
+        .content {
+            background-color: #eaf6ff;
+            padding: 30px;
+            min-height: 400px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #2a7fff;
+            margin-bottom: 20px;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            font-size: 1.2em;
+            box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            width: 180px;
+        }
+
+        .menu-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .menu-button span {
+            margin-right: 8px;
+            font-size: 1.5em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="C:\Users\truen\OneDrive\Desktop\602Assingment3\logo.png" alt="SkySync Logo" class="logo"> <!-- Replace with the path to your logo -->
+        <h1>SkySync</h1>
+    </div>
+
+    <div class="content">
+        <h2>🖨️ Section 7: Printing</h2>
+
+        <div class="menu-container">
+            <a href="page2.html" class="menu-button"><span>🛠️</span>VMware Setup</a>
+            <a href="page3.html" class="menu-button"><span>💻</span>Hyper-V Config</a>
+            <a href="page4.html" class="menu-button"><span>⚙️</span>Create VMs</a>
+            <a href="page5.html" class="menu-button"><span>📂</span>AD Services</a>
+            <a href="page6.html" class="menu-button"><span>🔐</span>Group Policy</a>
+            <a href="page7.html" class="menu-button"><span>🖨️</span>Printing</a>
+            <a href="page8.html" class="menu-button"><span>📦</span>WDS</a>
+            <a href="page9.html" class="menu-button"><span>🔄</span>VM Management</a>
+            <a href="page10.html" class="menu-button"><span>🛡️</span>Security</a>
+            <a href="page11.html" class="menu-button"><span>🔧</span>Config</a>
+            <a href="page12.html" class="menu-button"><span>🚀</span>Deployment</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SkySync. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 7: Printing</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2980b9;
+            border-left: 4px solid #2980b9;
+            padding-left: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        ul {
+            font-size: 1.1em;
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Section 7: Printing</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Goals</h2>
+            <ul>
+                <li>Install and configure a print server on WS2</li>
+                <li>Add a shared printer</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024, Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 7: Printing - Implementation Steps</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .step {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step h2 {
+            font-size: 1.5em;
+            color: #2980b9;
+        }
+
+        .step p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .emoji {
+            font-size: 2.5em;
+            margin-right: 15px;
+        }
+
+        .step:nth-child(even) .emoji {
+            margin-right: 0;
+            margin-left: 15px;
+        }
+
+        details {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .emoji {
+                font-size: 2em;
+            }
+        }
+
+        .hint {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #2980b9;
+            margin-top: 5px;
+        }
+
+        .fun-fact {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #e74c3c;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Section 7: Printing - Step by Step Guide</h1>
+    </header>
+
+    <main>
+
+        <div class="step">
+            <div class="emoji">🖥️</div>
+            <div>
+                <details>
+                    <summary>Step 1: Ensure WS2 is part of the Server's OU</summary>
+                    <p>WS2 is already a server, but if not, you need to make sure the print server machine is in the Server's OU in Active Directory. This ensures proper communication between the print server and the rest of the network.</p>
+                    <p class="hint">💡 Hint: OU stands for Organizational Unit. It helps group similar objects in Active Directory!</p>
+                    <p class="fun-fact">🔍 Fun Fact: Active Directory was first introduced by Microsoft in 1999 as part of Windows 2000!</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="emoji">🛠️</div>
+            <div>
+                <details>
+                    <summary>Step 2: Add Print and Document Services Role</summary>
+                    <p>Using Server Manager, navigate to Add Roles and Features. Select the Print and Document Services role, and when prompted, make sure to select the Print Server option.</p>
+                    <p class="hint">💡 Hint: This step adds all necessary features to manage printers, including the Print Management console and print drivers.</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="emoji">🖨️</div>
+            <div>
+                <details>
+                    <summary>Step 3: Use Print Management Tool</summary>
+                    <p>Go to the Print Management tool. This tool will help you manage printers, queues, and print drivers. It's the hub for all printer configurations.</p>
+                    <p class="fun-fact">🔍 Fun Fact: The first mechanical printer was invented in 1822 by Charles Babbage!</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="emoji">🔧</div>
+            <div>
+                <details>
+                    <summary>Step 4: Add Printer Drivers</summary>
+                    <p>In the Print Management tool, go to Drivers and add the necessary drivers for the printer you’re connecting. Make sure they match the printer model and type to avoid any compatibility issues.</p>
+                    <p class="hint">💡 Hint: Installing the correct drivers is crucial, especially in environments with mixed 32-bit and 64-bit systems. Always check compatibility!</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="emoji">🌐</div>
+            <div>
+                <details>
+                    <summary>Step 5: Add Port and IP Address</summary>
+                    <p>Navigate to Ports in the Print Management tool and add the printer’s IP address and port. This step ensures that your server knows where to find the physical printer on the network.</p>
+                    <p class="fun-fact">🔍 Fun Fact: Most printers today use the TCP/IP protocol to communicate over the network, which was developed as part of the ARPANET project in the 1970s.</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="emoji">🖥️</div>
+            <div>
+                <details>
+                    <summary>Step 6: Add Printer Device to the Server</summary>
+                    <p>Once the drivers are installed and the port is configured, add the printer device to the print server in Print Management. This will link the printer to the server for network-wide use.</p>
+                    <p class="hint">💡 Hint: Use the "Add Printer Wizard" to quickly search for network printers if you're unsure of the IP or port.</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="emoji">👨‍💻</div>
+            <div>
+                <details>
+                    <summary>Step 7: Add Printer to Client Machines</summary>
+                    <p>Finally, add the printer to the client machines by navigating to Devices and Printers or deploying it through Group Policy if managing many machines.</p>
+                    <p class="fun-fact">🔍 Fun Fact: The first laser printer was introduced by Xerox in 1969, and it revolutionized the way we print today!</p>
+                </details>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024, Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 7: Printing</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .navigation a {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            background-color: #1f6391;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- Page content here -->
+
+        <!-- Navigation buttons for previous and next page -->
+        <div class="navigation">
+            <a href="page9.html">Previous: Section 6</a>
+            <a href="page11.html">Next: Section 8</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024, Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySync - Network Services and Admin Tools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #57c2ff;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 80px;
+            height: auto;
+        }
+
+        .content {
+            background-color: #eaf6ff;
+            padding: 30px;
+            min-height: 400px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #2a7fff;
+            margin-bottom: 20px;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            font-size: 1.2em;
+            box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            width: 180px;
+        }
+
+        .menu-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .menu-button span {
+            margin-right: 8px;
+            font-size: 1.5em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="C:\Users\truen\OneDrive\Desktop\602Assingment3\logo.png" alt="SkySync Logo" class="logo"> <!-- Replace with the path to your logo -->
+        <h1>SkySync</h1>
+    </div>
+
+    <div class="content">
+        <h2>🔧 Network Services and Admin Tools</h2>
+
+        <div class="menu-container">
+            <a href="page2.html" class="menu-button"><span>🛠️</span>VMware Setup</a>
+            <a href="page3.html" class="menu-button"><span>💻</span>Hyper-V Config</a>
+            <a href="page4.html" class="menu-button"><span>⚙️</span>Create VMs</a>
+            <a href="page5.html" class="menu-button"><span>📂</span>AD Services</a>
+            <a href="page6.html" class="menu-button"><span>🔐</span>Group Policy</a>
+            <a href="page7.html" class="menu-button"><span>🖨️</span>Printing</a>
+            <a href="page8.html" class="menu-button"><span>📦</span>WDS</a>
+            <a href="page9.html" class="menu-button"><span>🔄</span>VM Management</a>
+            <a href="page10.html" class="menu-button"><span>🛡️</span>Security</a>
+            <a href="page11.html" class="menu-button"><span>🔧</span>Config</a>
+            <a href="page12.html" class="menu-button"><span>🚀</span>Deployment</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SkySync. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 2: Network Services and Admin Tools</title>
+</head>
+<body>
+    <h1>Section 2: Network Services and Admin Tools</h1>
+    <h2>Goals</h2>
+    <ul>
+        <li>Configure the following network services on both WS1:
+            <ul>
+                <li>Domain Controller</li>
+                <li>Dynamic Host Configuration Protocol (DHCP)</li>
+                <li>Domain Name System (DNS) – primary</li>
+            </ul>
+        </li>
+        <li>Configure the following on WS2:
+            <ul>
+                <li>Domain controller with a child domain of WS1</li>
+                <li>DNS secondary</li>
+                <li>Windows Internet Name Service (WINS)</li>
+                <li>Webserver: Internet Information Services (IIS) with a customized webpage for your organization linked to your domain name</li>
+            </ul>
+        </li>
+        <li>Configure a one-way trust from WS1 to WS2 domain</li>
+        <li>Join Windows client machine VM to the domain</li>
+    </ul>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 VMware Configuration Guide 🌟</title>
+</head>
+<body>
+    <h1>Step-by-Step Guide to Configure Network Services on WS1</h1>
+
+    <h2>Configure Domain Controller</h2>
+    <ol>
+        <li>
+            Open <strong>VMware Workstation</strong> 📂.
+            <p>Double-click the VMware Workstation icon on your desktop or find it in your Start menu to launch the application.</p>
+        </li>
+        <br>
+        <li>
+            Select your <strong>WS1 virtual machine</strong> and power it on ⚡.
+            <p>Click on the WS1 VM and then click the "Power on this virtual machine" button.</p>
+        </li>
+        <br>
+        <li>
+            Log into <strong>Windows Server</strong> on WS1 🖥️.
+            <p>Use your credentials to log into the Windows Server operating system on WS1.</p>
+        </li>
+        <br>
+        <li>
+            Open <strong>Server Manager</strong> 📂.
+            <p>Click on the Start button and select "Server Manager" from the menu.</p>
+        </li>
+        <br>
+        <li>
+            Click on <strong>Add roles and features</strong> ➕.
+            <p>In Server Manager, click "Add roles and features" to open the wizard.</p>
+        </li>
+        <br>
+        <li>
+            Select <strong>Role-based or feature-based installation</strong> and click <strong>Next</strong> ➡️.
+            <p>Choose "Role-based or feature-based installation" and click "Next" to proceed.</p>
+        </li>
+        <br>
+        <li>
+            Select your <strong>WS1 server</strong> from the server pool and click <strong>Next</strong> ➡️.
+            <p>Choose WS1 from the list of servers and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Check the <strong>Active Directory Domain Services</strong> role and click <strong>Next</strong> ➡️.
+            <p>Select "Active Directory Domain Services" and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Complete the wizard and click <strong>Install</strong> ✔️.
+            <p>Follow the wizard’s instructions and click "Install" to set up the Domain Controller.</p>
+        </li>
+    </ol>
+
+    <h2>Configure DHCP</h2>
+    <ol>
+        <li>
+            Open <strong>Server Manager</strong> 📂.
+            <p>Click on the Start button and select "Server Manager" from the menu.</p>
+        </li>
+        <br>
+        <li>
+            Click on <strong>Add roles and features</strong> ➕.
+            <p>In Server Manager, click "Add roles and features" to open the wizard.</p>
+        </li>
+        <br>
+        <li>
+            Select <strong>Role-based or feature-based installation</strong> and click <strong>Next</strong> ➡️.
+            <p>Choose "Role-based or feature-based installation" and click "Next" to proceed.</p>
+        </li>
+        <br>
+        <li>
+            Select your <strong>WS1 server</strong> from the server pool and click <strong>Next</strong> ➡️.
+            <p>Choose WS1 from the list of servers and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Check the <strong>DHCP Server</strong> role and click <strong>Next</strong> ➡️.
+            <p>Select "DHCP Server" and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Complete the wizard and click <strong>Install</strong> ✔️.
+            <p>Follow the wizard’s instructions and click "Install" to set up DHCP.</p>
+        </li>
+        <br>
+        <li>
+            Configure the DHCP server.
+            <p>After installation, open the DHCP Management Console and configure your IP ranges and settings.</p>
+        </li>
+    </ol>
+
+    <h2>Configure DNS</h2>
+    <ol>
+        <li>
+            Open <strong>Server Manager</strong> 📂.
+            <p>Click on the Start button and select "Server Manager" from the menu.</p>
+        </li>
+        <br>
+        <li>
+            Click on <strong>Add roles and features</strong> ➕.
+            <p>In Server Manager, click "Add roles and features" to open the wizard.</p>
+        </li>
+        <br>
+        <li>
+            Select <strong>Role-based or feature-based installation</strong> and click <strong>Next</strong> ➡️.
+            <p>Choose "Role-based or feature-based installation" and click "Next" to proceed.</p>
+        </li>
+        <br>
+        <li>
+            Select your <strong>WS1 server</strong> from the server pool and click <strong>Next</strong> ➡️.
+            <p>Choose WS1 from the list of servers and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Check the <strong>DNS Server</strong> role and click <strong>Next</strong> ➡️.
+            <p>Select "DNS Server" and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Complete the wizard and click <strong>Install</strong> ✔️.
+            <p>Follow the wizard’s instructions and click "Install" to set up DNS.</p>
+        </li>
+        <br>
+        <li>
+            Configure DNS settings.
+            <p>Open the DNS Management Console and configure your DNS zones and records.</p>
+        </li>
+    </ol>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Configure Network Services on WS2 🌟</title>
+</head>
+<body>
+    <h1>Configure the following on WS2</h1>
+
+    <h2>Domain Controller with a Child Domain of WS1</h2>
+    <ol>
+        <li>
+            Open <strong>Server Manager</strong> 📂.
+            <p>Click the Start button and select "Server Manager" from the menu.</p>
+        </li>
+        <br>
+        <li>
+            Click on <strong>Add roles and features</strong> ➕.
+            <p>In Server Manager, click "Add roles and features" to open the wizard.</p>
+        </li>
+        <br>
+        <li>
+            Select <strong>Role-based or feature-based installation</strong> and click <strong>Next</strong> ➡️.
+            <p>Choose "Role-based or feature-based installation" and click "Next" to proceed.</p>
+        </li>
+        <br>
+        <li>
+            Select your <strong>WS2 server</strong> from the server pool and click <strong>Next</strong> ➡️.
+            <p>Choose WS2 from the list of servers and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Check the <strong>Active Directory Domain Services</strong> role and click <strong>Next</strong> ➡️.
+            <p>Select "Active Directory Domain Services" and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Complete the wizard and click <strong>Install</strong> ✔️.
+            <p>Follow the wizard’s instructions and click "Install" to set up the Domain Controller.</p>
+        </li>
+        <br>
+        <li>
+            Open the <strong>Active Directory Domain Services Configuration Wizard</strong> and promote this server to a domain controller.
+            <p>Open the configuration wizard and follow the steps to create a child domain of WS1.</p>
+        </li>
+        <br>
+        <li>
+            Configure the child domain.
+            <p>Create the child domain, e.g., child.yourdomainname.com, and ensure it is part of the existing forest and site.</p>
+        </li>
+        <br>
+        <li>
+            Authenticate with the parent domain using the administrator credentials.
+            <p>Provide the WS1 administrator credentials for authentication.</p>
+        </li>
+    </ol>
+
+    <h2>Configure DNS Secondary</h2>
+    <ol>
+        <li>
+            Open <strong>Server Manager</strong> 📂.
+            <p>Click on the Start button and select "Server Manager" from the menu.</p>
+        </li>
+        <br>
+        <li>
+            Click on <strong>Add roles and features</strong> ➕.
+            <p>In Server Manager, click "Add roles and features" to open the wizard.</p>
+        </li>
+        <br>
+        <li>
+            Select <strong>Role-based or feature-based installation</strong> and click <strong>Next</strong> ➡️.
+            <p>Choose "Role-based or feature-based installation" and click "Next" to proceed.</p>
+        </li>
+        <br>
+        <li>
+            Select your <strong>WS2 server</strong> from the server pool and click <strong>Next</strong> ➡️.
+            <p>Choose WS2 from the list of servers and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Fun Guide to Setting Up DNS Server</title>
+                <style>
+                    body {
+                        font-family: 'Arial', sans-serif;
+                        background-color: #f0f8ff;
+                        color: #333;
+                        padding: 20px;
+                        line-height: 1.6;
+                    }
+                    h1 {
+                        color: #4CAF50;
+                        text-align: center;
+                    }
+                    h2 {
+                        color: #ff5722;
+                        margin-top: 20px;
+                    }
+                    ol {
+                        margin: 20px 0;
+                    }
+                    li {
+                        background: #e7f3fe;
+                        border-left: 5px solid #2196F3;
+                        padding: 10px;
+                        margin: 5px 0;
+                        border-radius: 5px;
+                    }
+                    .fun-fact {
+                        font-style: italic;
+                        color: #555;
+                        margin-top: 10px;
+                    }
+                    .footer {
+                        text-align: center;
+                        margin-top: 40px;
+                        font-size: 0.9em;
+                        color: #777;
+                    }
+                </style>
+            </head>
+            <body>
+            
+                <h1>🌟 Fun Guide to Setting Up Your DNS Server! 🌟</h1>
+            
+                <h2>Step 1: Check the DNS Server Role</h2>
+                <ol>
+                    <li>Open the <strong>Server Manager</strong> on your Windows Server.</li>
+                    <li>Navigate to the <strong>Manage</strong> menu at the top right and select <strong>Add Roles and Features</strong>.</li>
+                    <li>In the <strong>Add Roles and Features Wizard</strong>, click <strong>Next</strong> to proceed.</li>
+                </ol>
+                <p class="fun-fact">Did you know? The DNS Server translates domain names into IP addresses, making the internet user-friendly! 🌐</p>
+            
+                <h2>Step 2: Select the DNS Server Role</h2>
+                <ol>
+                    <li>On the <strong>Select Server Roles</strong> page, find and check the box for <strong>DNS Server</strong>.</li>
+                    <li>Click <strong>Next</strong> to continue through the wizard.</li>
+                </ol>
+            
+                <h2>Step 3: Complete the Wizard</h2>
+                <ol>
+                    <li>Review the features and settings for the DNS Server. Click <strong>Next</strong> until you reach the <strong>Confirm installation selections</strong> page.</li>
+                    <li>Finally, click <strong>Install</strong> to set up the DNS Server role. 🎉</li>
+                </ol>
+            
+                <h2>Step 4: Configure DNS as Secondary</h2>
+                <ol>
+                    <li>Once the installation is complete, open the <strong>DNS Management Console</strong>.</li>
+                    <li>Right-click on <strong>Forwarders</strong> and select <strong>Add Secondary Zone</strong>.</li>
+                    <li>Follow the wizard to create a new secondary zone for your domain:</li>
+                    <ul>
+                        <li><strong>Zone Type:</strong> Choose <strong>Secondary Zone</strong> and click <strong>Next</strong>.</li>
+                        <li><strong>Zone Name:</strong> Enter the name of the zone (e.g., <em>yourdomain.com</em>).</li>
+                        <li><strong>Master DNS Servers:</strong> Add the IP address of the primary DNS server.</li>
+                    </ul>
+                    <li>Click <strong>Finish</strong> to complete the setup of the secondary DNS zone.</li>
+                </ol>
+            
+                <h2>Step 5: Verify Configuration</h2>
+                <ol>
+                    <li>Check that the new secondary zone appears under the <strong>Zones</strong> section in the DNS Management Console.</li>
+                    <li>Perform DNS lookups to verify that the secondary server is resolving queries correctly.</li>
+                </ol>
+            
+                <h2>🎊 Conclusion 🎊</h2>
+                <p>By following these steps, you will successfully check the DNS Server role, install it, and configure it as a secondary DNS server for your domain. Happy Networking! 🚀</p>
+            
+                <div class="footer">
+                    &copy; 2024 Your Friendly Tech Guide. All Rights Reserved.
+                </div>
+            
+            </body>
+            </html>
+            
+    <h2>Configure Windows Internet Name Service (WINS)</h2>
+    <ol>
+        <li>
+            Open <strong>Server Manager</strong> 📂.
+            <p>Click on the Start button and select "Server Manager" from the menu.</p>
+        </li>
+        <br>
+        <li>
+            Click on <strong>Add roles and features</strong> ➕.
+            <p>In Server Manager, click "Add roles and features" to open the wizard.</p>
+        </li>
+        <br>
+        <li>
+            Select <strong>Role-based or feature-based installation</strong> and click <strong>Next</strong> ➡️.
+            <p>Choose "Role-based or feature-based installation" and click "Next" to proceed.</p>
+        </li>
+        <br>
+        <li>
+            Select your <strong>WS2 server</strong> from the server pool and click <strong>Next</strong> ➡️.
+            <p>Choose WS2 from the list of servers and click "Next".</p>
+        </li>
+        <br>
+        <li>
+            Check the <strong>WINS Server</strong> role and click <strong>Next</strong> ➡️.
+            <p>Select "WINS Server" and click "Next".</p>
+        </li>
+        <br
+       
+
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Windows Client VM to Domain</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        h2 {
+            color: #ff5722;
+            margin-top: 20px;
+        }
+        ol {
+            margin: 20px 0;
+        }
+        li {
+            background: #e7f3fe;
+            border-left: 5px solid #2196F3;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .fun-fact {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌟 How to Join Your Windows Client VM to the Domain! 🌟</h1>
+
+    <h2>Step 1: Open System Properties</h2>
+    <ol>
+        <li>Log in to your Windows client VM.</li>
+        <li>Right-click on <strong>This PC</strong> (or <strong>My Computer</strong>) and select <strong>Properties</strong>.</li>
+        <li>In the System window, click on <strong>Advanced system settings</strong> on the left.</li>
+    </ol>
+
+    <h2>Step 2: Access Computer Name Settings</h2>
+    <ol>
+        <li>In the System Properties window, click the <strong>Computer Name</strong> tab.</li>
+        <li>Click on the <strong>Change...</strong> button to modify the computer's name or join a domain.</li>
+    </ol>
+    <p class="fun-fact">Fun Fact: Each computer in a domain must have a unique name to avoid confusion! 🖥️</p>
+
+    <h2>Step 3: Join the Domain</h2>
+    <ol>
+        <li>Select the option <strong>Domain</strong> under <strong>Member of</strong>.</li>
+        <li>Enter the name of the domain you want to join (e.g., <em>yourdomain.com</em>).</li>
+        <li>Click <strong>OK</strong> to proceed.</li>
+    </ol>
+
+    <h2>Step 4: Enter Domain Credentials</h2>
+    <ol>
+        <li>When prompted, enter the credentials of a user account that has permission to join the domain.</li>
+        <li>Click <strong>OK</strong> to continue.</li>
+    </ol>
+
+    <h2>Step 5: Restart the VM</h2>
+    <ol>
+        <li>You will see a welcome message confirming that your computer has been added to the domain.</li>
+        <li>Click <strong>OK</strong> and then <strong>Close</strong> the System Properties window.</li>
+        <li>Restart your Windows client VM to complete the process.</li>
+    </ol>
+
+    <h2>🎊 Conclusion 🎊</h2>
+    <p>Congratulations! You've successfully joined your Windows client VM to the domain. Now you're all set to enjoy the benefits of centralized management and resources! 🚀</p>
+
+    
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Two-Way Forest Trusts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        h2 {
+            color: #ff5722;
+            margin-top: 20px;
+        }
+        ol {
+            margin: 20px 0;
+        }
+        li {
+            background: #e7f3fe;
+            border-left: 5px solid #2196F3;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .fun-fact {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌟 Creating Two-Way Forest Trusts! 🌟</h1>
+
+    <h2>Step 1: Open Active Directory Domains and Trusts</h2>
+    <ol>
+        <li>Log in to the domain controller for the first forest.</li>
+        <li>Open the <strong>Active Directory Domains and Trusts</strong> tool from the Administrative Tools.</li>
+    </ol>
+
+    <h2>Step 2: Create a New Trust</h2>
+    <ol>
+        <li>Right-click on the domain node and select <strong>Properties</strong>.</li>
+        <li>Go to the <strong>Trusts</strong> tab.</li>
+        <li>Click on <strong>New Trust...</strong> to launch the Trust Wizard.</li>
+    </ol>
+
+    <h2>Step 3: Configure Trust Type</h2>
+    <ol>
+        <li>Follow the wizard's prompts to enter the name of the second forest.</li>
+        <li>Select <strong>Forest Trust</strong> and click <strong>Next</strong>.</li>
+        <li>Choose <strong>Two-way</strong> trust to allow mutual access to resources.</li>
+    </ol>
+    <p class="fun-fact">Did you know? Two-way trusts allow users in both forests to access resources in either domain! 🌐</p>
+
+    <h2>Step 4: Set Authentication Options</h2>
+    <ol>
+        <li>Choose the authentication type you want for the trust:</li>
+        <ul>
+            <li><strong>Forest-wide authentication</strong> allows users from either forest to access resources.</li>
+            <li><strong>Selective authentication</strong> lets you control which users can access resources.</li>
+        </ul>
+        <li>Click <strong>Next</strong> and complete the wizard.</li>
+    </ol>
+
+    <h2>Step 5: Validate the Trust</h2>
+    <ol>
+        <li>After creating the trust, validate it by clicking the <strong>Validate</strong> button in the Trusts tab.</li>
+        <li>Follow the prompts to confirm the trust relationship is established successfully.</li>
+    </ol>
+
+    <h2>🎊 Conclusion 🎊</h2>
+    <p>Congratulations! You've successfully created a two-way forest trust, enabling seamless resource sharing between the two forests. 🎉</p>
+
+    
+
+</body>
+</html>
+
+    
+        <p>For more details, visit <a href="page6.html">Section 3: Active Directory</a>.</p>
+    </section>
+
+   
+
+    <style>
+        /* Footer styling */
+        .footer {
+            background-color: #007bb5; /* Dark blue background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 0 0 15px 15px;
+            font-size: 1em;
+            position: relative;
+            margin-top: 20px;
+        }
+    
+        .footer a {
+            color: #ffc107; /* Yellow link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    
+        /* Home and Next Page buttons */
+        .footer .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #00aaff; /* Blue background */
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    
+        .footer .button:hover {
+            background-color: #ffc107; /* Yellow on hover */
+            transform: scale(1.1); /* Slightly enlarges on hover */
+        }
+    </style>
+    
+    <div class="footer">
+        <p class="copyright">&copy; 2024 Your Friendly Tech Guide. All Rights Reserved.</p>
+        <p>
+            <a href="index.html" class="button">🏠 Home</a> <!-- Home Button -->
+            <a href="page6.html" class="button">➡️ Section 3: Active Directory</a> <!-- Next Page Button -->
+        </p>
+    </div>
+    

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySync - Install Windows Server 2019 on VMware</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #57c2ff;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 80px;
+            height: auto;
+        }
+
+        .content {
+            background-color: #eaf6ff;
+            padding: 30px;
+            min-height: 400px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #2a7fff;
+            margin-bottom: 20px;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            font-size: 1.2em;
+            box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            width: 180px;
+        }
+
+        .menu-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .menu-button span {
+            margin-right: 8px;
+            font-size: 1.5em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="C:\Users\truen\OneDrive\Desktop\602Assingment3\logo.png" alt="SkySync Logo" class="logo"> <!-- Replace with the path to your logo -->
+        <h1>SkySync</h1>
+    </div>
+
+    <div class="content">
+        <h2>Let's Install Windows Server 2019 on VMware!</h2>
+
+        <div class="menu-container">
+            <a href="page2.html" class="menu-button"><span>🛠️</span>VMware Setup</a>
+            <a href="page3.html" class="menu-button"><span>💻</span>Hyper-V Config</a>
+            <a href="page4.html" class="menu-button"><span>⚙️</span>Create VMs</a>
+            <a href="page5.html" class="menu-button"><span>📂</span>AD Services</a>
+            <a href="page6.html" class="menu-button"><span>🔐</span>Group Policy</a>
+            <a href="page7.html" class="menu-button"><span>🖨️</span>Printing</a>
+            <a href="page8.html" class="menu-button"><span>📦</span>WDS</a>
+            <a href="page9.html" class="menu-button"><span>🔄</span>VM Management</a>
+            <a href="page10.html" class="menu-button"><span>🛡️</span>Security</a>
+            <a href="page11.html" class="menu-button"><span>🔧</span>Config</a>
+            <a href="page12.html" class="menu-button"><span>🚀</span>Deployment</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SkySync. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Beginner's Guide to Installing Windows Server 2019 on VMware 🎉</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            color: #005f73;
+        }
+
+        h3 {
+            color: #008cba;
+        }
+
+        ol li {
+            margin-bottom: 15px;
+        }
+
+        .on-screen {
+            border: 2px solid #005f73;
+            padding: 10px;
+            background-color: #e0f7fa;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .fun-extras, .cta-section {
+            background-color: #e6f9ff;
+            border: 2px solid #008cba;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Big Button Styles */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .big-button {
+            background-color: #008cba;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+
+        .big-button:hover {
+            background-color: #005f73;
+        }
+
+        .home-button {
+            background-color: #f57c00;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+
+        .home-button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <header class="section">
+        
+        <p>Follow this fun and easy guide to set up your own Windows Server 2019 VM! 💻</p>
+    </header>
+
+    <div class="container">
+        <main>
+            <!-- Step-by-Step Fun Guide -->
+            <section class="section bordered guide-section">
+                <h2>Step-by-Step Installation Guide 🛠️</h2>
+                <ol>
+                    <!-- Step 1 -->
+                    <li>
+                        <h3>Step 1: Visit VMware’s Website 🌐</h3>
+                        <p><span class="right-click">Right Click</span> on your browser and select <strong>"Open Link"</strong> to visit the official <a href="https://www.vmware.com" target="_blank" class="link">VMware website</a>.</p>
+                        <div class="on-screen">👀 On Screen: Look for the Downloads section at the top. Time to grab your VMware software!</div>
+                    </li>
+
+                    <!-- Step 2 -->
+                    <li>
+                        <h3>Step 2: Download VMware 🖱️</h3>
+                        <p>Once there, <span class="left-click">Left Click</span> on Downloads, then choose VMware Workstation or VMware Fusion (depending on your operating system).</p>
+                        <div class="on-screen">👀 On Screen: Select your OS (Windows, macOS, or Linux), then <span class="left-click">Click Download</span> to start!</div>
+                    </li>
+
+                    <!-- Step 3 -->
+                    <li>
+                        <h3>Step 3: Get Windows Server 2019 ISO 🌍</h3>
+                        <p>Now go to the <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019" target="_blank" class="link">Microsoft Evaluation Center</a> and <span class="left-click">Download</span> the Windows Server 2019 ISO. It's free for evaluation!</p>
+                        <div class="on-screen">👀 On Screen: You’ll need a Microsoft account—sign in or create one for free!</div>
+                    </li>
+
+                    <!-- Step 4 -->
+                    <li>
+                        <h3>Step 4: Fire Up VMware 🔥</h3>
+                        <p><span class="left-click">Double Click</span> the VMware icon on your desktop to open the program. Let’s get this started!</p>
+                    </li>
+
+                    <!-- Step 5 -->
+                    <li>
+                        <h3>Step 5: Create Your Virtual Machine 🖥️</h3>
+                        <p>In VMware, <span class="left-click">Click</span> on **Create a New Virtual Machine** under the File menu to start building your VM!</p>
+                        <div class="on-screen">👀 On Screen: Choose Custom (Advanced) to tweak your VM settings step-by-step. Hit **Next** to proceed.</div>
+                    </li>
+
+                    <!-- Step 6 -->
+                    <li>
+                        <h3>Step 6: Select Your ISO File 📂</h3>
+                        <p>When the setup asks for the installation media, <span class="left-click">Click Browse</span> and choose the Windows Server 2019 ISO file you downloaded earlier.</p>
+                        <div class="on-screen">👀 On Screen: After selecting, hit **Next** to move forward!</div>
+                    </li>
+
+                    <!-- Step 7 -->
+                    <li>
+                        <h3>Step 7: Name Your VM & Save 📁</h3>
+                        <p>Give your VM a cool name (like "ServerMaster2019") and choose where you’d like to save the VM files. Then <span class="left-click">Click Next</span> to continue!</p>
+                    </li>
+
+                    <!-- Step 8 -->
+                    <li>
+                        <h3>Step 8: Customize Hardware Settings 🔧</h3>
+                        <p>Configure your VM’s hardware:</p>
+                        <ul>
+                            <li><strong>Memory:</strong> Allocate 4GB (4096MB).</li>
+                            <li><strong>Network Adapter:</strong> Set it to **Bridged** for network access.</li>
+                            <li><strong>Hard Disk:</strong> Allocate at least 40GB for Windows Server.</li>
+                        </ul>
+                        <p><span class="left-click">Click Finish</span> when you're done configuring.</p>
+                    </li>
+
+                    <!-- Step 9 -->
+                    <li>
+                        <h3>Step 9: Power Up the VM 🚀</h3>
+                        <p><span class="left-click">Click</span> **Power on this virtual machine** to boot up your VM! It will start loading from the ISO file.</p>
+                    </li>
+
+                    <!-- Step 10 -->
+                    <li>
+                        <h3>Step 10: Install Windows Server 2019 🖥️</h3>
+                        <p>Follow the installation instructions, choosing your preferred language, time zone, and network settings. Just keep clicking **Next** to proceed!</p>
+                    </li>
+
+                    <!-- Step 11 -->
+                    <li>
+                        <h3>Step 11: Configure the 🧱🔥 Firewall</h3>
+                        <p>After installation, protect your VM with Windows 🔥 Firewall 🧱. Go to Control Panel > System and Security > Windows Defender Firewall** to adjust your settings.</p>
+                        <div class="on-screen">👀 On Screen: Turn the firewall on/off or tweak advanced settings for extra security!</div>
+                    </li>
+
+                    <!-- Step 12 -->
+                    <li>
+                        <h3>Step 12: Log In and Explore! 🕹️</h3>
+                        <p>Once installation is complete, log in with your new admin credentials. Congrats! You now have a fully functional Windows Server 2019 VM ready for action!</p>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Fun Extras -->
+            <section class="fun-extras section">
+                <h2>🎉 Bonus Tips & Tricks 🎉</h2>
+                <p>Here are some fun things to try out:</p>
+                <ul>
+                    <li><strong>Take a Snapshot:</strong> Before experimenting, take a snapshot of your VM to restore it later if needed.</li>
+                    <li><strong>Explore Roles:</strong> Check out Server Manager and add roles like DNS or Active Directory to level up your server!</li>
+                </ul>
+            </section>
+
+            <!-- Call-to-Action Buttons -->
+            <div class="button-container">
+                <a href="index.html" class="home-button">🏠 Home</a>
+                <a href="page5.html" class="big-button">Network Services and Admin Tools</a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Windows Server Installation Guide - Let's Power Up Your IT World!</p>
+    </footer>
+</body>
+</html>
